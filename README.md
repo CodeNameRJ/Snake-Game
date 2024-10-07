@@ -12,10 +12,10 @@ Welcome to the Snake Game! This is a simple and interactive implementation of th
 
 ## Demo## 
 ### Game Start Screen
-<img src="https://github.com/user-attachments/assets/e89a98af-b262-46a6-abd2-e7ef15a2e3a6" alt="Game Start Screen" width="400" height="300">
+<img src="https://github.com/user-attachments/assets/e89a98af-b262-46a6-abd2-e7ef15a2e3a6" alt="Game Start Screen" width="300" height="300">
 
 ### Game Over Screen
-<img src="https://github.com/user-attachments/assets/8308b3eb-58fe-4604-8cbd-03dfa9e6bbbe" alt="Game Over Screen" width="400" height="300">
+<img src="https://github.com/user-attachments/assets/8308b3eb-58fe-4604-8cbd-03dfa9e6bbbe" alt="Game Over Screen" width="300" height="300">
 
 ## Features
 - Classic Snake gameplay
