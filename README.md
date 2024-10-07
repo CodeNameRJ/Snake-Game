@@ -13,8 +13,7 @@ Welcome to the Snake Game! This is a simple and interactive implementation of th
 ## Demo
 
 ![image](https://github.com/user-attachments/assets/961c5847-23ef-40fd-a8ea-9e103ca712ee)
-![image](https://github.com/user-attachments/assets/4b43aa9c-b6f0-4ecd-92e0-f5bdc5f8c432)
-![image](https://github.com/user-attachments/assets/201f31f0-fe84-4656-93c1-050c26e22511)
+![image](https://github.com/user-attachments/assets/bd16c060-0903-4372-8a8e-464e4c690d97)
 
 
 ## Features
