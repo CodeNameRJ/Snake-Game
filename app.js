@@ -10,9 +10,7 @@ const gameState = {
 }
 
 
-const rows = document.querySelectorAll('.board .row');
-
-console.log(rows)
+const rows = document.querySelectorAll('.board .row')
 
 
 const init = () => {
@@ -21,18 +19,14 @@ const init = () => {
     gameState.highScore = 0;
     gameState.snake = [{ row: 5, col: 5 }];
     gameState.food = {};
-    gameState.direction = { x: 0, y: 0 };
+    gameState.direction = { x: 0, y: 0 }
     placeFood();
     updateScoreDisplay();
     updateHighScoreDisplay()
     setInterval(() => {
         moveSnake();
     }, 200);
-
-
     renderBoard();
-
-
 }
 
 
@@ -59,13 +53,11 @@ const renderBoard = () => {
     gameState.snake.forEach(segment => {
         const snakeCell = rows[segment.row].children[segment.col];
         snakeCell.classList.add('snake');
-
-        console.log(gameState.snake)
     });
 
 
     const foodPosition = gameState.food
-    console.log(foodPosition)
+    console.log(foodPosition);
     const foodCell = rows[foodPosition.row].children[foodPosition.col];
     foodCell.classList.add('food');
 }
@@ -81,21 +73,21 @@ const moveSnake = () => {
 
 
     if (checkForFoodCollision(newHead)) {
-        gameState.score += 1
+        gameState.score += 1;
         if (gameState.score > gameState.highScore) {
-            gameState.highScore = gameState.score; // Update high score
-            updateHighScoreDisplay() // Update the displayed high score
+            gameState.highScore = gameState.score; 
+            updateHighScoreDisplay(); 
         }
-        placeFood()
-        updateScoreDisplay()
+        placeFood();
+        updateScoreDisplay();
     } else {
-        gameState.snake.pop()
+        gameState.snake.pop();
     }
 
-    gameState.snake.unshift(newHead) // add newhead
+    gameState.snake.unshift(newHead);
 
     if (checkForWallCollision(newHead) || checkForSelfCollision(newHead)) {
-        gameOver(); // Handle game over
+        gameOver(); 
     }
 
 
@@ -111,7 +103,7 @@ const checkForFoodCollision = (head) => {
 
 
 const checkForSelfCollision = (head) => {
-    return gameState.snake.slice(1).some(segment => segment.row === head.row && segment.col === head.col)
+    return gameState.snake.slice(1).some(segment => segment.row === head.row && segment.col === head.col);
 
 };
 
@@ -132,12 +124,9 @@ const updateHighScoreDisplay = () => {
 };
 
 
-
-
-
 const gameOver = () => {
     showGameOverMessage();
-    clearInterval(gameInterval)
+    clearInterval(gameInterval);
     resetGame();
 };
 
@@ -159,7 +148,7 @@ const showGameOverMessage = () => {
     const finalScoreEl = document.querySelector('.final-score');
 
     messageTitleEl.textContent = 'Game Over!';
-    finalScoreEl.textContent = `Your Score: ${gameState.score} - High Score: ${gameState.highScore}`
+    finalScoreEl.textContent = `Your Score: ${gameState.score} - High Score: ${gameState.highScore}`;
 
     messageEl.style.display = 'block';
 
@@ -177,7 +166,7 @@ const hideGameOverMessage = () => {
 
 
 
-init()
+init();
 
 
 document.addEventListener('keydown', (e) => {
@@ -210,5 +199,5 @@ document.addEventListener('keydown', (e) => {
 
 
 document.querySelector('.play-again-button').addEventListener('click', (e) => {
-    resetGame() 
+    resetGame(); 
 });
