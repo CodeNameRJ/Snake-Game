@@ -10,7 +10,7 @@ Welcome to the Snake Game! This is a simple and interactive implementation of th
 - [Getting Started]
 
 
-## Demo## 
+## Demo
 ### Game Start Screen
 <img src="https://github.com/user-attachments/assets/e89a98af-b262-46a6-abd2-e7ef15a2e3a6" alt="Game Start Screen" width="300" height="300">
 
